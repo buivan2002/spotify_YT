@@ -1,0 +1,7 @@
+.modeToggle {
+    position: fixed; /* Cố định ở một vị trí */
+    top: 20px; /* Đặt cách phần trên cùng 20px */
+    right: 20px; /* Đặt cách phần bên phải 20px */
+    z-index: 999; /* Đảm bảo luôn ở trên các phần tử khác */
+  }
+  
