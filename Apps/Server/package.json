@@ -22,7 +22,6 @@
 
   "dependencies": {
 
-    "connect-redis": "^8.0.1",
 
     "cookie-parser": "^1.4.7",
 
@@ -35,10 +34,6 @@
     "express-session": "^1.18.1",
 
     "googleapis": "^144.0.0",
-
-    "ioredis": "^5.4.2",
-
-    "redis": "^4.7.0",
 
     "request": "^2.88.2"
 

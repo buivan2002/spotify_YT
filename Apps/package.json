@@ -1,0 +1,22 @@
+{
+  "name": "spotify",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+  "Apps/Web",
+  "Apps/Server" 
+],
+  "scripts": {
+    "install": "npm install",
+    "start:web": "npm run start --workspace=apps/web",
+    "start:server": "npm run start --workspace=apps/server",
+    "dev:web": "npm run dev --workspace=apps/web",
+    "dev:server": "npm run start --workspace=apps/server",
+    "build": "npm run build --workspaces"
+  },
+  "dependencies": {
+    "connect-redis": "^8.0.1",
+    "ioredis": "^5.4.2",
+    "redis": "^4.7.0"
+  }
+}
