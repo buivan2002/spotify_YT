@@ -1,6 +1,5 @@
 import { createClient } from 'redis';
 import { NextResponse } from 'next/server'; // Import NextResponse
-import { access } from 'fs';
 
 // Khởi tạo Redis client
 const redisClient = createClient();
@@ -36,9 +35,9 @@ export async function GET(req: Request) { // Sử dụng Request thay vì req nh
 
     // Nếu không tìm thấy session, trả về lỗi 404
     return NextResponse.json({ error: 'Session not found' }, { status: 404 });
-  } catch (err: any) {
+  } catch (err:unknown) {
     // Nếu gặp lỗi, log và trả về lỗi 500
-    console.error("Error message:", err.message);
+    console.error("Error message:", err);
     return NextResponse.json({ error: 'Error retrieving session' }, { status: 500 });
   }
 }

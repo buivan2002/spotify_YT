@@ -39,8 +39,12 @@ export default function Playlists() {
 
     fetchPlaylists();
   }, []);
-
-  const items = playlists.playlists.map((item: any) => (
+  interface PlaylistItem {
+    id: string; 
+    name: string;
+  }
+  
+  const items = playlists.playlists.map((item:PlaylistItem) => (
     <UnstyledButton  
       key={item.id} 
       className={classes.item}
